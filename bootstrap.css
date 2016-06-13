@@ -1598,14 +1598,17 @@ pre code {
     width: 970px;
   }
 }
+
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
+   .jumbotron .container {
+        padding-top: 200px;
+  }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4169,9 +4172,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 0px;
   border: 1px solid transparent;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
@@ -4956,9 +4961,9 @@ a.badge:focus {
 .jumbotron {
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
+  background-image: url(toppic.jpg);
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4968,6 +4973,7 @@ a.badge:focus {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
+    color: orange;
 }
 .jumbotron > hr {
   border-top-color: #d5d5d5;
@@ -4976,7 +4982,6 @@ a.badge:focus {
 .container-fluid .jumbotron {
   padding-right: 15px;
   padding-left: 15px;
-  border-radius: 6px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -4985,6 +4990,7 @@ a.badge:focus {
   .jumbotron {
     padding-top: 48px;
     padding-bottom: 48px;
+  height: 450px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
@@ -5817,7 +5823,6 @@ button.list-group-item-danger.active:focus {
 .well {
   min-height: 20px;
   padding: 19px;
-  margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
@@ -6753,3 +6758,10 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.bottom_menu{
+  background: rgba(128, 128, 128, 0.26);
+    padding: 20px;
+}
+.bottom{
+  padding:10px;
+}

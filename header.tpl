@@ -50,53 +50,33 @@
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href=""><span class="glyphicon glyphicon-phone"></span>НАШ ТЕЛЕФОН: 8(7212)400733</a></li>
+							<li><a href=""></span>НАШ ТЕЛЕФОН: 8(7212)400733</a></li>
 
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
-	<div class="site-wrapper {if !$page.main} site-wrap{/if}">
-		<div class="header">
-			<div class="logo">
-	            <a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo.png" alt=""></a>
-	        </div>
-	        {if $online_but.link!=""}
-	        <div class="online-but">
-	        	<a href="{$online_but.link}">
-	        		<img src="images/online-but.png" alt="">
-	        	</a>
-	        </div>
-	        {/if}
-	        {if $slogan.body!=""}
-	        <div class="slogan">
-	        	{$slogan.body}
-	        </div>
-	        {/if}
-   			
-   	        {if $phone.body!=""}
-   	        <div class="phone">
-   	        	{$phone.body}
-   	        </div>
-   	        {/if}
-   	        {if $phone_but.link!=""}
-   	        <div class="phone-but">
-   	        	<a href="{$phone_but.link}">
-   	        		<img src="images/phone-but.png" alt="">
-   	        	</a>
-   	        </div>
-   	        {/if}
-   	        {if $time.body!=""}
-   	        <div class="time">
-   	        	{$time.body}
-   	        </div>
-   	        {/if}
-   	        <form action="/search" class="search-form" method="get">
-   	           <input name="search" type="text"  class="s-text" placeholder="Поиск по сайту" />
-   	          <input type="submit" class="s-button" value="" />
-   	        </form>
-		</div>
-		<!-- {if $page.main}
+			<div class="jumbotron">
+				  <div class="container">
+						<a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo.png" alt=""></a>
+						{if $slogan.body!=""}
+		        <div class="slogan">
+		        	{$slogan.body}
+		        </div>
+		        {/if}
+
+						{if $online_but.link!=""}
+						<div class="online-but">
+							<a href="{$online_but.link}">
+								<img src="images/online-but.png" alt="">
+							</a>
+						</div>
+						{/if}
+
+				  </div>
+			</div>
+	<div class="row" style="background-color:white;     padding-top: 20px;">
+			<!-- {if $page.main}
 		{if $edit_block.title!="" && $edit_block.body!=""}
 		<div class="edit-block-wrapper">
 			<div class="edit-block">
@@ -111,17 +91,21 @@
 		</div>
 		{/if}
 		{/if} -->
-		<div class="content-wrapper {if $page.main} content-wrap{/if}">
+
 			{if !$page.main}
-			<div class="left-column">
-				<div class="logo3">
-	   	            <a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo3.png" alt=""></a>
+			<div class="col-md-4 col-md-offset-1">
+							<div class="logo3">
+	   	            <a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo3.png" class="img-responsive" alt=""></a>
 	   	        </div>
 				{if !empty($menu)}
 				{include file="global:simplemenu.tpl" data=$menu class="menu-left"}
 				{/if}
 			</div>
-			{/if}
-			<div class="content-column">
-				<div class="content">
+		<div class="col-md-6">
 					<h1>{$h1|default:$page.seo_h1|default:$page.h1}</h1>
+			{/if}
+			{if $page.main}
+
+		<div class="col-md-10  col-md-offset-1">
+					<h1>{$h1|default:$page.seo_h1|default:$page.h1}</h1>
+			{/if}
