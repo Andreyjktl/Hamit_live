@@ -5,6 +5,8 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="ru"> <!--<![endif]-->
 <head>
+	<meta name="google-site-verification" content="LznZHMhKz9-tKA14dDZeln5tG-GaZo9wDtP8_EMKots" />
+	<meta name='yandex-verification' content='60e080f1c65e5de6' />
 <meta name="robots" content="{if $page.noindex}none{else}all{/if}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="{$page.description|escape}" />
@@ -22,6 +24,7 @@
 {$common_js}
 <script src="/g/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="images/modernizr-2.5.3.min.js"></script>
+<script src="images/bootstrap.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -50,7 +53,7 @@
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href=""></span>НАШ ТЕЛЕФОН: 8(7212)400733</a></li>
+							<li><a href="">НАШ ТЕЛЕФОН: 8(7212)400733</a></li>
 
 						</ul>
 					</div><!-- /.navbar-collapse -->
@@ -58,7 +61,8 @@
 			</nav>
 			<div class="jumbotron">
 				  <div class="container">
-						<a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo.png" alt=""></a>
+						<a href="http://{$smarty.server.HTTP_HOST}"><span style="color:white;">Компания
+						</span><br><h2 style="color:white; font-size:30px;">ТОО «Караганда Строй Монтаж»</h2></a>
 						{if $slogan.body!=""}
 		        <div class="slogan">
 		        	{$slogan.body}
@@ -92,20 +96,16 @@
 		{/if}
 		{/if} -->
 
-			{if !$page.main}
-			<div class="col-md-4 col-md-offset-1">
-							<div class="logo3">
-	   	            <a href="http://{$smarty.server.HTTP_HOST}"><img src="images/logo3.png" class="img-responsive" alt=""></a>
-	   	        </div>
-				{if !empty($menu)}
-				{include file="global:simplemenu.tpl" data=$menu class="menu-left"}
-				{/if}
-			</div>
-		<div class="col-md-6">
+			
+					<div class="col-md-3 col-md-offset-1">
+									<div class="logo3">
+			   	            <a href="http://{$smarty.server.HTTP_HOST}">
+			   	            <img src="images/logo3.png" class="img-responsive" alt=""></a>
+			   	        </div>
+						{if !empty($menu)}
+						{include file="global:simplemenu.tpl" data=$menu class="menu-left"}
+						{/if}
+					</div>
+				<div class="col-md-7">
 					<h1>{$h1|default:$page.seo_h1|default:$page.h1}</h1>
-			{/if}
-			{if $page.main}
-
-		<div class="col-md-10  col-md-offset-1">
-					<h1>{$h1|default:$page.seo_h1|default:$page.h1}</h1>
-			{/if}
+			
